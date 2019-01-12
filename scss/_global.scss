@@ -46,11 +46,23 @@
 
 .resume {
   height: 100%;
-  width: 100%;
+  width: 75%;
 }
 
 #about-h2 {
   padding-top: 20px;
+}
+
+.lead {
+  font-size: 1.65rem;
+}
+
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact-h2 {
