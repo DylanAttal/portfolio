@@ -450,14 +450,58 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5" />
-              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="" />
-              <p class="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Mollitia neque assumenda ipsam nihil, molestias magnam,
-                recusandae quos quis inventore quisquam velit asperiores, vitae?
-                Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+              <h2 class="text-secondary text-uppercase mb-0">
+                React Minesweeper
+              </h2>
+              <hr class="star-dark mb-1" />
+              <img
+                class="img-fluid"
+                src="img/portfolio/giphy-react-minesweeper.gif"
+                alt="minesweeper preview"
+              />
+              <h5 class="text-left">See it live</h5>
+              <p class="mb-3 text-left">
+                <a
+                  href="https://react-minesweeper-dylanattal.surge.sh/"
+                  target="_blank"
+                  >https://react-minesweeper-dylanattal.surge.sh/</a
+                >
+              </p>
+              <h5 class="text-left">Summary</h5>
+              <p class="mb-3 text-left">
+                This project is special to me because it was a lot of firsts. It
+                was the first large project where I pulled data from an API; it
+                was the first project where I broke down parts of the UI into
+                React components; and it was the first project where I used MobX
+                for state management.
+              </p>
+              <p class="mb-3 text-left">
+                I pulled data from the API
+                https://minesweeper-api.herokuapp.com/. I used POST requests to
+                create a new game, check a cell for a bomb, and flag cells that
+                I thought had bombs in them. I imported the Axios library to
+                perform API calls instead of using the standard
+                <code>.fetch()</code>.
+              </p>
+              <p class="mb-3 text-left">
+                I broke down the UI into separate components in order to take
+                advantage of repeating elements. The UI consists of the
+                <code>Table</code>, <code>Board</code>, and
+                <code>Cell</code> components. The <code>Table</code> includes
+                the top two rows and bottom row which give information about the
+                game, like the difficulty and the amount of mines left. The
+                <code>Board</code> <code>map</code>s over data from the API and
+                renders rows of <code>Cell</code>s. This functionality of React
+                kept me from repeating a lot of code and ensured each
+                <code>Cell</code> had the correct functions passed down to it to
+                check its contents.
+              </p>
+              <p class="mb-3 text-left">
+                I chose to update the state of the game through MobX. I put the
+                "difficulty," "number of mines left," and "won/lost" state into
+                the <code>Game</code> component. That way when a player loses
+                the game, the logic for displaying "You lose!" in the App.js
+                file just references the state in <code>Game</code>.
               </p>
               <a
                 class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss"
