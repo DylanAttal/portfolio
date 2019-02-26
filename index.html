@@ -172,6 +172,29 @@
           <div class="col-xl-4 col-lg-6 col-md-6 preview-center">
             <a
               class="portfolio-item d-block mx-auto preview-border"
+              href="#portfolio-modal-3"
+            >
+              <div
+                class="portfolio-item-caption d-flex position-absolute h-100 w-100"
+              >
+                <div
+                  class="portfolio-item-caption-content my-auto w-100 text-center text-white"
+                >
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <div class="gif-container">
+                <img
+                  class="img-fluid savings-goals"
+                  src="img/portfolio/savings-goals.gif"
+                  alt="Preview of a savings goals project that showcases creating a goal and adding money to it."
+                />
+              </div>
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 preview-center">
+            <a
+              class="portfolio-item d-block mx-auto preview-border"
               href="#portfolio-modal-2"
             >
               <div
@@ -188,29 +211,6 @@
                   class="img-fluid minesweeper"
                   src="img/portfolio/giphy-react-minesweeper.gif"
                   alt="Preview of a minesweeper React app showcasing a short game played."
-                />
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-4 col-lg-6 col-md-6 preview-center">
-            <a
-              class="portfolio-item d-block mx-auto preview-border"
-              href="#portfolio-modal-3"
-            >
-              <div
-                class="portfolio-item-caption d-flex position-absolute h-100 w-100"
-              >
-                <div
-                  class="portfolio-item-caption-content my-auto w-100 text-center text-white"
-                >
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <div class="gif-container">
-                <img
-                  class="img-fluid"
-                  src="img/portfolio/react-blackjack.gif"
-                  alt="Preview of a blackjack React app showcasing several short hands played."
                 />
               </div>
             </a>
@@ -566,46 +566,41 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary text-uppercase mb-0">
-                React Blackjack
+                Savings Goals
               </h2>
               <hr class="star-dark mb-5" />
               <img
                 class="img-fluid mb-3"
-                src="img/portfolio/react-blackjack.gif"
-                alt="Preview of a blackjack React app showcasing several short hands played."
+                src="img/portfolio/savings-goals.gif"
+                alt="Preview of a savings goals project that showcases creating a goal and adding money to it."
               />
               <h5 class="text-left">See it live</h5>
               <p class="mb-3 text-left">
                 <a
-                  href="https://react-blackjack-dylanattal.surge.sh"
+                  href="https://savings-goals-app.herokuapp.com/"
                   target="_blank"
-                  >https://react-blackjack-dylanattal.surge.sh</a
+                  >https://savings-goals-app.herokuapp.com/</a
                 >
               </p>
               <h5 class="text-left">Summary</h5>
               <p class="mb-3 text-left">
-                This project was a rework of my <a href="http://blackjack-dylanattal.surge.sh"
-                target="_blank">vanilla JavaScript blackjack app</a>.
-                I used React this time to split the app into components and update elements on the DOM.
-                I used the Axioslibrary to generate a deck of cards from the API <a href="https://deckofcardsapi.com/"
-                target="_blank">https://deckofcardsapi.com/</a> and deal cards to the player and the dealer.
+                The goal of this project was to create a savings goals app for a fictional bank named Acme Bank. I authenticated users through Auth0, using their Google credentials to sign up and log in to the app. Users are able to view, create, update, and delete their savings goals.
               </p>
               <p class="mb-3 text-left">
-                One high point of the project was using a lookup table in the <code>totalHand</code> function to determine the
-                player and dealer totals by adding up the value of all their cards. I accessed either the player's
-                or dealer's hand dynamically by naming the argument for the <code>totalHand</code> function <code>whichHand</code> then
-                utilizing bracket notation to reach the <code>playerHand</code> or <code>dealerHand</code> through the state like this:
-                <code>this.state[whichHand]</code>. I then iterated through each card using <code>forEach()</code>, and I replaced the
-                Ace, King, Queen, and Jack values with integers and totaled all the values.
+                This is a Single Page Application with React on the front-end and Rails on the back-end. I used React Router for routing and Axios for API calls. The app has a PostgreSQL database with only two tables: Users and Goals.
               </p>
               <p class="mb-3 text-left">
-                Another point of pride was generating the card images dynamically. I passed down the <code>playerHand</code>
-                or <code>dealerHand</code> from state to the <code>Hand</code> component. I then accessed the cards from the <code>Hand</code>
-                component's props and <code>map</code>ped over each card, displaying its image from the API.
+                I broke each Goal into its own component and passed each Goal its particular information through props after using a GET request on the Savings page to populate the state with an array of all the current user's goals.
+              </p>
+              <p class="mb-3 text-left">
+                Users can then create new goals with a goal name, a target amount, and an amount for money already saved. Users can go on to change that target amount, add money to the saved amount, or delete the goal altogether.
+              </p>
+              <p class="mb-3 text-left">
+                I deployed the app to Heroku.
               </p>
               <h5 class="text-left">Technologies Used</h5>
               <p class="mb-3 text-left">
-                HTML, CSS, Javascript, React, Axios
+                HTML, CSS, JavaScript, React, Axios, React Router, Ruby, Rails, PostgreSQL, JWT, Auth0
               </p>
               <a
                 class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss"
